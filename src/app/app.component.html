@@ -1,0 +1,24 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>
+        {{ title }}!
+      </h1>
+      <p>Feel fee to add some blocks! :) </p>
+    </div>
+  </div>
+
+  <div class="row bottom20">
+    <button (click)="addBlock();">Add</button>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let block of blocks" class="col-md-2">
+      <h2 class="bg-blue">{{block.name}}</h2>
+      <p class="bg-blue-light">{{block.body}}</p>
+      <!-- block! -->
+    </div>
+
+</div>
+
