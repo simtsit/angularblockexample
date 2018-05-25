@@ -9,14 +9,19 @@
     </div>
   </div>
 
-  <div class="row bottom20">
-    <button (click)="addBlock();">Add</button>
+  <div class="row bottom20 center">
+    <p><button class="btn btn-success" (click)="addBlock();">Add New Block</button></p>
   </div>
 
   <div class="row">
-    <div *ngFor="let block of blocks" class="col-md-2">
-      <h2 class="bg-blue">{{block.name}}</h2>
-      <p class="bg-blue-light">{{block.body}}</p>
+    <div *ngFor="let block of blocks; let i = index" class="col-md-3">
+      <div class="blockheader bg-blue">
+        <h3>{{block.name}}</h3>
+        <button class="btn btn-danger" (click)="removeBlock(i);">X</button>
+      </div>
+      <div class="blockbody bg-blue-light">
+        <p>{{block.body}}</p>
+      </div>
       <!-- block! -->
     </div>
 

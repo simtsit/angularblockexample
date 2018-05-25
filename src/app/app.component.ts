@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Form Example!';
+  title = 'Blocks Example!';
 
   blocks = [{
     "name": "block1",
@@ -22,9 +22,23 @@ export class AppComponent {
     "body": "body3"
   }];
 
+  blockCounter = 3;
+ 
+
 
   addBlock(){
-  	this.blocks.push({"name": "newBlock", "body":"New block body!"});
+    this.blockCounter++;
+    let newBlockName = "Block";
+    let newBlockBody = "Body";
+    newBlockName = newBlockName + String(this.blockCounter);
+    newBlockBody = newBlockBody + String(this.blockCounter);
+    this.blocks.push({"name": newBlockName, "body": newBlockBody});
+    console.log("A new block has been added!");
+  }
+
+  removeBlock(index){
+    this.blocks.splice(index,1);
+    console.log("Removed block: #" + ++index);
   }
 
 }

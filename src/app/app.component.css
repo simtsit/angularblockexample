@@ -1,3 +1,6 @@
+h3 {
+	margin: 0px;
+}
 .bottom20 {
 	padding-bottom: 20px;
 	font-size: 14px;
@@ -10,4 +13,20 @@
 
 .bg-blue-light {
 	background-color: #0089ff8f;
+}
+
+.blockheader h3,
+.blockbody p {
+	padding: 8px;
+}
+
+.blockheader button {
+	position: absolute;
+    right: 8%;
+    top: 6px;
+}
+
+.center {
+	left: 45%;
+	position: relative;
 }
